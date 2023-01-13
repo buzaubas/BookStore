@@ -12,23 +12,28 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BookStore.lib;
 
 namespace BookStore
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для pageRegistration.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    /// 
+    public partial class pageRegistration : Page
     {
-        public MainWindow()
+        public pageRegistration()
         {
             InitializeComponent();
-            MainFrame.Source = new Uri("Pages/pageMain.xaml", UriKind.RelativeOrAbsolute);
+            gdRegisterForm.DataContext = new Users();
+
+            UserService userService = new UserService();
+            cbCity.ItemsSource = userService.GetCities();
         }
 
-        private void Label_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Source = new Uri("pageRegistration.xaml", UriKind.RelativeOrAbsolute);
+            Users users = (Users)gdRegisterForm.DataContext;
         }
     }
 }

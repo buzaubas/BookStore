@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookStore"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        Title="MainWindow" Height="800" Width="1200">
     <Grid Background="DarkGray">
         <Grid.RowDefinitions>
             <RowDefinition Height="10"></RowDefinition>
@@ -17,14 +17,14 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
             <ColumnDefinition Width="150"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <Border BorderBrush="Black" Grid.Column="1" Grid.Row="1" BorderThickness="1,1,1,1" CornerRadius="10" Background="Black">
             <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Label Foreground="WhiteSmoke" FontSize="14" Content="Home" Margin="10, 0, 10, 0" Cursor="Hand"/>
-                <Label Foreground="WhiteSmoke" FontSize="14" Content="Register" Margin="0, 0, 10, 0" Cursor="Hand"/>
+                <Label Foreground="WhiteSmoke" FontSize="14" Content="Register" Margin="0, 0, 10, 0" Cursor="Hand" MouseDoubleClick="Label_MouseDoubleClick"/>
                 <Label Foreground="WhiteSmoke" FontSize="14" Content="Contact" Margin="0, 0, 10, 0" Cursor="Hand"/>
                 <Label Foreground="WhiteSmoke" FontSize="14" Content="About Us" Margin="0, 0, 10, 0" Cursor="Hand"/>
                 <Label Foreground="WhiteSmoke" FontSize="14" Content="View Cart" Margin="0, 0, 10, 0" Cursor="Hand"/>
@@ -39,8 +39,8 @@
 
         <Grid Grid.Row="5" Grid.Column="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -58,8 +58,7 @@
                     <Button Content="Login"></Button>
                 </WrapPanel>
             </StackPanel>
-
-            <Frame x:Name="MainFrame"></Frame>
+            <Frame x:Name="MainFrame" Grid.Column="1" Grid.Row="0"></Frame>
         </Grid>
         
     </Grid>
