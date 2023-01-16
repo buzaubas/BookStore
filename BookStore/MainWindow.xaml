@@ -6,6 +6,14 @@
         xmlns:local="clr-namespace:BookStore"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="1200">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="\Resources\Style.xaml"></ResourceDictionary> 
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
     <Grid Background="DarkGray">
         <Grid.RowDefinitions>
             <RowDefinition Height="10"></RowDefinition>
@@ -21,13 +29,13 @@
             <ColumnDefinition Width="150"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Border BorderBrush="Black" Grid.Column="1" Grid.Row="1" BorderThickness="1,1,1,1" CornerRadius="10" Background="Black">
+        <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource BorderStyle}">
             <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Label Foreground="WhiteSmoke" FontSize="14" Content="Home" Margin="10, 0, 10, 0" Cursor="Hand"/>
-                <Label Foreground="WhiteSmoke" FontSize="14" Content="Register" Margin="0, 0, 10, 0" Cursor="Hand" MouseDoubleClick="Label_MouseDoubleClick"/>
-                <Label Foreground="WhiteSmoke" FontSize="14" Content="Contact" Margin="0, 0, 10, 0" Cursor="Hand"/>
-                <Label Foreground="WhiteSmoke" FontSize="14" Content="About Us" Margin="0, 0, 10, 0" Cursor="Hand"/>
-                <Label Foreground="WhiteSmoke" FontSize="14" Content="View Cart" Margin="0, 0, 10, 0" Cursor="Hand"/>
+                <Label Style="{StaticResource BorderLableStyle}"/>
+                <Label Content="Register" Style="{StaticResource BorderLableStyle}" MouseDoubleClick="Label_MouseDoubleClick"/>
+                <Label Content="Contact" Style="{StaticResource BorderLableStyle}" MouseDoubleClick="Label_MouseDoubleClick_1"/>
+                <Label Content="About Us" Style="{StaticResource BorderLableStyle}" MouseDoubleClick="Label_MouseDoubleClick_2"/>
+                <Label Content="View Cart" Style="{StaticResource BorderLableStyle}" MouseDoubleClick="Label_MouseDoubleClick_3"/>
             </WrapPanel>
         </Border>
 

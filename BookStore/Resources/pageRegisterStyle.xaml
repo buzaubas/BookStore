@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="Lable">
+        <Setter Property="Control.FontSize" Property="12"></Setter>
+    </Style>
+
+    <Style x:Key="H1Lable" TargetType="Label">
+        <Setter Property="FontSize" Property="12"></Setter>
+        
+    </Style>
+</ResourceDictionary>

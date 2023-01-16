@@ -71,7 +71,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\pageContacts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\pageMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\pageRegisterStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Style.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -79,6 +91,9 @@
   <ItemGroup>
     <Compile Include="pageRegistration.xaml.cs">
       <DependentUpon>pageRegistration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pageContacts.xaml.cs">
+      <DependentUpon>pageContacts.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\pageMain.xaml.cs">
       <DependentUpon>pageMain.xaml</DependentUpon>

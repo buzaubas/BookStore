@@ -30,5 +30,20 @@ namespace BookStore
         {
             MainFrame.Source = new Uri("pageRegistration.xaml", UriKind.RelativeOrAbsolute);
         }
+
+        private void Label_MouseDoubleClick_1(object sender, MouseButtonEventArgs e)
+        {
+            MainFrame.Source = new Uri("Pages/pageMain.xaml", UriKind.RelativeOrAbsolute);
+        }
+
+        private void Label_MouseDoubleClick_2(object sender, MouseButtonEventArgs e)
+        {
+            MainFrame.Source = new Uri("Pages/pageMain.xaml", UriKind.RelativeOrAbsolute);
+        }
+
+        private void Label_MouseDoubleClick_3(object sender, MouseButtonEventArgs e)
+        {
+            MainFrame.Source = new Uri("Pages/pageMain.xaml", UriKind.RelativeOrAbsolute);
+        }
     }
 }
